@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZCSRibbon.Test.Properties;
 
 namespace ZCSRibbon.Test
 {
@@ -16,7 +17,22 @@ namespace ZCSRibbon.Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            
+            RibbonManager rm = RibbonManager.Instance;
+            try
+            {
+                rm.FormIcon = Resources.TestIcon;
+                rm.FormTitle = "测试窗体";
+                Application.Run(rm.MainRibbonForm);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                rm.Dispose();
+            }
         }
     }
 }

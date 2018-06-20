@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ZCSRibbon.Test
 {
-    public partial class FormMain : Form
+    public partial class FormMain : CSRibbonForm
     {
         public FormMain()
         {
