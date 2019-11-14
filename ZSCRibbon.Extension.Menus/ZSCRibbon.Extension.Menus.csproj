@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD3FB7B2-C1A8-4A09-8E04-C02586D634AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZSCRibbon.Extension.Menus</RootNamespace>
+    <AssemblyName>ZSCRibbon.Extension.Menus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\Extensions\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ZCSRibbon\References\DotNetBar\12.4.0.2\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UCHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHelp.Designer.cs">
+      <DependentUpon>UCHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLeftPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeftPanel.Designer.cs">
+      <DependentUpon>UCLeftPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCOutputPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCOutputPanel.Designer.cs">
+      <DependentUpon>UCOutputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRightPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRightPanel.Designer.cs">
+      <DependentUpon>UCRightPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRTIFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRTIFile.Designer.cs">
+      <DependentUpon>UCRTIFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTBGT1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTBGT1.Designer.cs">
+      <DependentUpon>UCTBGT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTBGT2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTBGT2.Designer.cs">
+      <DependentUpon>UCTBGT2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCView.Designer.cs">
+      <DependentUpon>UCView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZSCRibbon.Extension\ZSCRibbon.Extension.csproj">
+      <Project>{f970a0ff-468a-45f2-8a56-24db6e0113c7}</Project>
+      <Name>ZSCRibbon.Extension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHelp.resx">
+      <DependentUpon>UCHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLeftPanel.resx">
+      <DependentUpon>UCLeftPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCOutputPanel.resx">
+      <DependentUpon>UCOutputPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRightPanel.resx">
+      <DependentUpon>UCRightPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRTIFile.resx">
+      <DependentUpon>UCRTIFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTBGT1.resx">
+      <DependentUpon>UCTBGT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTBGT2.resx">
+      <DependentUpon>UCTBGT2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCView.resx">
+      <DependentUpon>UCView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150105040817551_easyicon_net_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordwrap_16px_583552_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\526296.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

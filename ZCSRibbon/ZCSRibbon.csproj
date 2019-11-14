@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4FA462BD-0F61-416C-8EAA-F9975A7AAFE0}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZCSRibbon</RootNamespace>
     <AssemblyName>ZCSRibbon</AssemblyName>
@@ -29,12 +29,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ZCSRibbon.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Puzzle_64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -52,6 +59,8 @@
     <Compile Include="CSRibbonForm.Designer.cs">
       <DependentUpon>CSRibbonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EM\ExtensionManager.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RibbonManager.cs" />
   </ItemGroup>
@@ -66,10 +75,18 @@
   <ItemGroup>
     <Content Include="References\DotNetBar\12.4.0.2\DevComponents.DotNetBar2.dll" />
     <Content Include="References\DotNetBar\12.4.0.2\DevComponents.DotNetBar2.xml" />
+    <Content Include="Resources\Puzzle_32.ico" />
+    <Content Include="Resources\Puzzle_64.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="JSON\" />
     <Folder Include="Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZSCRibbon.Extension\ZSCRibbon.Extension.csproj">
+      <Project>{f970a0ff-468a-45f2-8a56-24db6e0113c7}</Project>
+      <Name>ZSCRibbon.Extension</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

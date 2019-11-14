@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 using ZCSRibbon.Test.Properties;
+using ZCSRibbon.Test.Views;
 
 namespace ZCSRibbon.Test
 {
@@ -23,6 +25,8 @@ namespace ZCSRibbon.Test
             {
                 rm.FormIcon = Resources.TestIcon;
                 rm.FormTitle = "测试窗体";
+                rm.FormStyle = eStyle.Office2010Blue;
+                
                 Application.Run(rm.MainRibbonForm);
             }
             catch (Exception ex)
